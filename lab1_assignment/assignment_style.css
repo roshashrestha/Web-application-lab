@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    background: black;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+
+.nav-name {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    font-size: 1rem;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    background: green;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+    }
+}
+
+.main-content {
+    flex: 1; 
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 60px 80px;
+    gap: 60px;
+
+    max-width: 1200px;
+    margin: 0 ;
+}
+
+.intro-left img {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.intro-right {
+    max-width: 500px;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-right h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.intro-right h1 span {
+    color: violet;
+}
+
+.intro-right p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .intro-right {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .intro-right h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-right h1 {
+        font-size: 1.6rem;
+    }
+}
+
+.footer {
+    text-align: center;
+    color: pink;
+    padding: 15px;
+}

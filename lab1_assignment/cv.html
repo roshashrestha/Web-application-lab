@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae</title>
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      background-color: rgb(238, 227, 223);
+      font-family: Arial, sans-serif;
+    }
+
+    /* Main CV Box */
+    .cv-container {
+      width: 70%;
+      margin: 30px auto;
+      background-color: white;
+      padding: 20px;
+    }
+
+    /* Title */
+    .title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* PERSONAL INFO USING FLEXBOX */
+    .personal-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .info-photo img {
+      width: 120px;
+      height: 120px;
+      border-radius: 20%;
+      object-fit: cover;
+      border: 1px solid #000;
+    }
+
+    /* LIST */
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cv-container">
+
+    <!-- Title -->
+    <h1 class="title">Curriculum Vitae</h1>
+
+    <!-- Personal Information -->
+    <div class="personal-info">
+      <div class="info-text">
+        <ul>
+          <li><strong>Name:</strong> Rosha Shrestha</li>
+          <li><strong>Address:</strong> Madhyapur Thimi, Bhaktapur</li>
+          <li><strong>Contact:</strong> 9761805111</li>
+          <li><strong>Email:</strong> rosha.shrestha@email.com</li>
+        </ul>
+      </div>
+
+      <div class="info-photo">
+        <img src="profile.jpg" alt="Passport Size Photo">
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <h2>Education</h2>
+
+    <table>
+      <tr>
+        <th>Qualification</th>
+        <th>Institute</th>
+        <th>GPA</th>
+      </tr>
+      <tr>
+        <td>SEE</td>
+        <td>Medha Secondary School</td>
+        <td>3.90</td>
+      </tr>
+      <tr>
+        <td>SLC</td>
+        <td>St. Xavier's College</td>
+        <td>3.64</td>
+      </tr>
+      <tr>
+        <td>Bachelor's (3rd Year)</td>
+        <td>Advance College of Engineering</td>
+        <td>3.60</td>
+      </tr>
+    </table>
+
+  </div>
+
+</body>
+</html>
