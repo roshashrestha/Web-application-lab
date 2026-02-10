@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Employee Management System</title>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <h3>Employee Management System</h3>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- TEXT ABOVE BUTTON -->
+        <p class="admin-text">GO TO ADMIN PANEL</p>
+
+        <form action="/admin/" class="admin-form">
+            <button type="submit" class="admin-btn">
+                <strong>ADMIN</strong>
+            </button>
+        </form>
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

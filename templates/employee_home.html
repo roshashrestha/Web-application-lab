@@ -1,0 +1,60 @@
+{% extends "home.html" %}
+
+{% block content %}
+
+{% if employees %}
+<table class="emp-table">
+    <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th colspan="3">Actions</th>
+    </tr>
+
+    {% for emp in employees %}
+    <tr>
+        <td>{{emp.employee_id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.address}}</td>
+        <td>{{emp.phone}}</td>
+
+        
+        <td>
+            <a href="{% url 'read_employee' emp.id %}" class="btn read-btn">
+                Read
+            </a>
+        </td>
+
+        <td>
+            <a href="{% url 'update_employee' emp.id %}" class="btn update-btn">
+                Update
+            </a>
+        </td>
+
+        <td>
+            <form action="{% url 'delete_employee' emp.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn delete-btn">Delete</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h3>No Data Found</h3>
+{% endif %}
+
+<hr>
+
+<h2>Create New Employee</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn create-btn">Submit</button>
+</form>
+
+{% endblock %}

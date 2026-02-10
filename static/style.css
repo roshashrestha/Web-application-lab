@@ -1,0 +1,96 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 80px auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
+}
+
+.navbar {
+    background-color:pink;
+    color:white;
+    display:flex;
+    justify-content:center;   
+    align-items:center;       
+    font-weight:bold;         
+    font-size:30px;          
+    padding:20px;
+}
+
+.admin-text {
+    display:flex;
+    justify-content:center;  
+    align-items:center; 
+    font-size:30px;
+    font-weight:bold;
+    color:darkred;
+    margin-bottom:15px;
+}
+
+.admin-form {
+    display:flex;
+    justify-content:center;
+}
+
+
+.admin-btn {
+    padding:14px 40px;   
+    font-size:20px;      
+    font-weight:bold;
+    background-color:pink;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.admin-btn:hover {
+    background-color:darkred;
+    transform:scale(1.05);
+}
+
+
+
+.content { 
+    padding:20px;
+    text-align:center;
+}
+
+
+
+
+form {
+    text-align: left;          
+    width: 50%;
+    margin: 40px auto;         
+}
+
+table {
+    width: 68%;
+    margin: 30px auto;
+    border-collapse: collapse;   
+    table-layout: fixed;         
+}
+
+th, td {
+    border: 1px solid #aaa;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;     
+}
+
+th {
+    background-color: pink;
+    color: white;
+    font-weight: bold;
+}
+
+tr {
+    padding: 0px;
+}
+
+
